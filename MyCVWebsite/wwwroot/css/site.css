@@ -1,0 +1,57 @@
+@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+:root {
+    --logoSize:2.5rem;
+    --shadowBackground: rgba(0, 0, 0, 0.6);
+}
+.page {
+    position: relative;
+    height: 100vh;
+}
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: aliceblue;
+}
+body {
+    background-image: url(../images/pieces-abstract-background-bubble-artik.png);
+    background-color: black;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+#blazor-error-ui {
+    display: none;
+}
+
+/*********************
+    MainLayout
+*/
+
+#header-bar .fab {
+    font-size: var(--logoSize);
+}
+/*#header-bar {
+    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.2);
+}*/
+
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+    background-color: var(--shadowBackground);
+}
+footer .fab {
+    font-size: var(--logoSize);
+    padding: 5px;
+}
+/*********************
+    MainLayout END
+*/
+
+/** Helpers **/
+.full-centering {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/** Helpers END **/

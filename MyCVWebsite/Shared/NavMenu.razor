@@ -1,0 +1,62 @@
+﻿
+
+<nav class="navbar navbar-expand-lg navbar-dark justify-content-end">
+    <button class="navbar-toggler" @onclick="ToggleNavMenu" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="@NavMenuCssClass navbar-collapse m-auto" @onclick="ToggleNavMenu" id="nav-menu">
+        @*<a class="navbar-brand" href="#">Brand/Logo</a>*@
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <NavLink Match="NavLinkMatch.All" class="nav-link px-3" href="/">Home</NavLink>
+            </li>
+            <li class="nav-item">
+                <NavLink class="nav-link px-3" href="about">About Me</NavLink>
+            </li>
+            <li class="nav-item">
+                <NavLink class="nav-link px-3" href="education">Education</NavLink>
+            </li>
+            <li class="nav-item">
+                <NavLink class="nav-link px-3" href="work-experience">Work Experience</NavLink>
+            </li>
+            <li class="nav-item">
+                <NavLink class="nav-link px-3" href="portfolio">Portfolio</NavLink>
+            </li>
+            <li class="nav-item">
+                <NavLink class="nav-link px-3" href="contact">Contact</NavLink>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+@code{
+    private bool collapseNavMenu = true;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}
+<style>
+    nav {
+        background-color: var(--shadowBackground)
+    }
+    nav ul li {
+        font-size: 1.5rem;
+        border-right: 1px solid black;
+    }
+
+        nav ul li:last-child {
+            border-right: none;
+        }
+
+    /* Makes it so nav is centered on larger screens */
+    @@media only screen and (min-width: 1200px) {
+        #nav-menu {
+            display: flex;
+            justify-content: center;
+        }
+    }
+</style>

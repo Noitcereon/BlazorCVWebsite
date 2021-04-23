@@ -1,0 +1,30 @@
+﻿@inherits LayoutComponentBase
+
+<div class="page">
+    <header>
+        @*<HeaderBar />*@
+        <NavMenu />
+    </header>
+    <main class="container">
+        @Body
+    </main>
+    <footer class="container-fluid">
+        <section class="container justify-content-center">
+
+            <div class="row">
+                <div class="col-md-5 d-flex justify-content-center">
+                    <span class="text-muted">© Thomas B. Andersen 2021-@(DateTime.Now.Year). All Rights Reserved.</span>
+                </div>
+                <div class="col-md-2 d-flex justify-content-center">
+                    @* center content (if any) *@
+                </div>
+                <div class="col-md-5">
+                    <a href="https://www.facebook.com/noitcereon/" class="mx-2"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/thomasandersen1998/" class="mx-2"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Noitcereon?tab=repositories" class="mx-2"><i class="fab fa-github"></i></a>
+                    <a href="#" class="mx-2"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+        </section>
+    </footer>
+</div>
