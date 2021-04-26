@@ -1,16 +1,23 @@
 @import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+
 :root {
-    --logoSize:2.5rem;
+    --logoSize: 2.5rem;
     --shadowBackground: rgba(0, 0, 0, 0.6);
+    --mainTextColor: #f0f8ff;
+    --mainLinkColor: #FCAC33;
+    --mainLinkSubColor: #F9BF66;
 }
+
 .page {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
 }
+
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: aliceblue;
+    color: var(--mainTextColor);
 }
+
 body {
     background-image: url(../images/pieces-abstract-background-bubble-artik.png);
     background-color: black;
@@ -18,6 +25,7 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 #blazor-error-ui {
     display: none;
 }
@@ -40,10 +48,11 @@ footer {
     background-color: black;
     background-color: var(--shadowBackground);
 }
-footer .fab {
-    font-size: var(--logoSize);
-    padding: 5px;
-}
+
+    footer .fab {
+        font-size: var(--logoSize);
+        padding: 5px;
+    }
 /*********************
     MainLayout END
 */

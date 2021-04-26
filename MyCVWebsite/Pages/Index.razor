@@ -2,12 +2,16 @@
 
 <div class="row">
     <section id="welcome-message-container" class="col-12 full-centering">
-        <div class="">
-            <h1>My name is Thomas Bækgaard Andersen</h1>
+        <div class="col-lg-8">
+            <h1>My name is <span class="font-weight-bolder">Thomas Bækgaard Andersen</span></h1>
             <p>
                 I'm a <span class="font-weight-bold">Full-Stack Web Developer</span> with a focus on
                 <span class="font-weight-bold">C# .NET</span>. I can create modern, responsive designs for
-                <span class="font-weight-bold">Web</span>, in addition to backend development with Restful API's.
+                <span class="font-weight-bold">Web</span>, in addition to <span class="font-weight-bold">Restful APIs</span>
+                to connect them with.
+            </p>
+            <p>
+                <a href="/about">Learn More About Me</a>
             </p>
         </div>
     </section>
@@ -16,6 +20,25 @@
 <style>
     #welcome-message-container {
         min-height: 75vh;
-        width: 5rem;
+        color: rgb(219, 227, 234);
+        text-align: center;
     }
+
+        #welcome-message-container .font-weight-bold {
+            min-height: 75vh;
+            color: aliceblue;
+        }
+
+        #welcome-message-container p {
+            font-size: 1.5rem;
+            padding-top: 1rem;
+            text-align: center;
+        }
+    #welcome-message-container a {
+        color: var(--mainLinkColor);
+        text-decoration-line: underline;
+    }
+        #welcome-message-container a:hover {
+            color: var(--mainLinkSubColor);
+        }
 </style>
