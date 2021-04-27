@@ -1,27 +1,32 @@
 ﻿@page "/"
 
-<div class="row">
-    <section id="welcome-message-container" class="col-12 full-centering">
-        <div class="col-lg-8">
-            <h1>My name is <span class="font-weight-bolder">Thomas Bækgaard Andersen</span></h1>
-            <p>
-                I'm a <span class="font-weight-bold">Full-Stack Web Developer</span> with a focus on
-                <span class="font-weight-bold">C# .NET</span>. I can create modern, responsive designs for
-                <span class="font-weight-bold">Web</span>, in addition to <span class="font-weight-bold">Restful APIs</span>
-                to connect them with.
-            </p>
-            <p>
-                <a href="/about">Learn More About Me</a>
-            </p>
-        </div>
-    </section>
-</div>
+<section id="welcome-message-container" class="col-12 full-centering">
+    <div class="col-lg-8">
+        <h1>My name is <span class="font-weight-bolder">Thomas Bækgaard Andersen</span></h1>
+        <p>
+            I'm a <span class="font-weight-bold">Full-Stack Web Developer</span> with a focus on
+            <span class="font-weight-bold">C# .NET</span>. I can create modern, responsive designs for
+            <span class="font-weight-bold">Web</span>, in addition to <span class="font-weight-bold">Restful APIs</span>
+            to connect them with.
+        </p>
+        <p>
+            <a href="/about">Learn More About Me</a>
+        </p>
+    </div>
+</section>
 
 <style>
+    body {
+        background-image: url(../images/pieces-abstract-background-bubble-artik.png);
+    }
+
     #welcome-message-container {
         min-height: 75vh;
         color: rgb(219, 227, 234);
         text-align: center;
+        /*    background-image: linear-gradient(0deg, var(--mainTextColor), var(--mainLinkColor), var(--mainTextColor), var(--mainLinkColor));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;*/
     }
 
         #welcome-message-container .font-weight-bold {
@@ -34,11 +39,13 @@
             padding-top: 1rem;
             text-align: center;
         }
-    #welcome-message-container a {
-        color: var(--mainLinkColor);
-        text-decoration-line: underline;
-    }
-        #welcome-message-container a:hover {
-            color: var(--mainLinkSubColor);
+
+        #welcome-message-container a {
+            color: var(--mainLinkColor);
+            text-decoration-line: underline;
         }
+
+            #welcome-message-container a:hover {
+                color: var(--mainLinkSubColor);
+            }
 </style>

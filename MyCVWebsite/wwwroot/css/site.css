@@ -19,11 +19,10 @@ html, body {
 }
 
 body {
-    background-image: url(../images/pieces-abstract-background-bubble-artik.png);
-    background-color: black;
-    background-attachment: fixed;
     display: flex;
     flex-direction: column;
+    background-color: #222;
+    background-attachment: fixed;
 }
 
 #blazor-error-ui {
@@ -41,6 +40,9 @@ body {
     background-color: #000000;
     background-color: rgba(0, 0, 0, 0.2);
 }*/
+main {
+    margin-bottom: 50px; /* To prevent the footer from going over the page content (particularly when opening mobile menu) */
+}
 
 footer {
     position: absolute;
@@ -62,5 +64,9 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.justify-center {
+    display:flex;
+    justify-content: center;
 }
 /** Helpers END **/
