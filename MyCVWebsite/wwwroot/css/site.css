@@ -41,7 +41,7 @@ body {
     background-color: rgba(0, 0, 0, 0.2);
 }*/
 main {
-    margin-bottom: 50px; /* To prevent the footer from going over the page content (particularly when opening mobile menu) */
+    margin-bottom: 100px; /* To prevent the footer from going over the page content (particularly when opening mobile menu) */
 }
 
 footer {
