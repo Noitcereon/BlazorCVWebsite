@@ -1,0 +1,38 @@
+﻿@using Models
+
+<EditForm Model="@_newContactForm" OnValidSubmit="SendEmail">
+    <div class="form-group">
+        <label for="full-name-input">Full Name</label>
+        <InputText @bind-Value="_newContactForm.FullName" class="form-control" id="full-name-input" placeholder="John Doe..."></InputText>
+    </div>
+    <div class="form-group">
+        <label for="email-input">E-mail</label>
+        <InputText @bind-Value="_newContactForm.Email" class="form-control" id="email-input" placeholder="example@mail.com..."></InputText>
+    </div>
+    <div class="form-group">
+        <label for="subject-input">Subject</label>
+        <InputText @bind-Value="_newContactForm.Subject" class="form-control" id="subject-input" placeholder="Subject..."></InputText>
+    </div>
+    <div class="form-group">
+        <label for="message-input">Message</label>
+        <InputTextArea @bind-Value="_newContactForm.Message" class="form-control" id="message-input" placeholder="Enter your message here..."></InputTextArea>
+    </div>
+    <button class="btn btn-primary">Send</button>
+    <DataAnnotationsValidator></DataAnnotationsValidator>
+    <ValidationSummary></ValidationSummary>
+</EditForm>
+@_emailTriggeredMessageTemp
+
+@code
+{
+    private ContactFormModel _newContactForm = new ContactFormModel();
+    private string _emailTriggeredMessageTemp { get; set; }
+    private int _tempNumberProp { get; set; }
+
+    private async Task SendEmail()
+    {
+        // Send Email.
+        _tempNumberProp++;
+        _emailTriggeredMessageTemp = $"SendEmail() was triggered {_tempNumberProp}";
+    }
+}
