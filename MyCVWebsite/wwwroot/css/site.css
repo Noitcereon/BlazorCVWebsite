@@ -1,3 +1,6 @@
+/*********************
+    Global
+*/
 @import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
 :root {
@@ -28,6 +31,12 @@ body {
 #blazor-error-ui {
     display: none;
 }
+.validation-message {
+    color: #dd2130;
+}
+/*
+    Global END
+**********************/
 
 /*********************
     MainLayout
@@ -55,9 +64,9 @@ footer {
         font-size: var(--logoSize);
         padding: 5px;
     }
-/*********************
+/*
     MainLayout END
-*/
+*********************/
 
 /** Helpers **/
 .full-centering {

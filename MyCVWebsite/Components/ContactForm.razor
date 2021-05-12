@@ -1,38 +1,52 @@
 ﻿@using Models
 
 <EditForm Model="@_newContactForm" OnValidSubmit="SendEmail">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
     <div class="form-group">
         <label for="full-name-input">Full Name</label>
-        <InputText @bind-Value="_newContactForm.FullName" class="form-control" id="full-name-input" placeholder="John Doe..."></InputText>
+        <InputText @bind-Value="_newContactForm.FullName"
+                   class="form-control" id="full-name-input" placeholder="John Doe..." />
     </div>
     <div class="form-group">
         <label for="email-input">E-mail</label>
-        <InputText @bind-Value="_newContactForm.Email" class="form-control" id="email-input" placeholder="example@mail.com..."></InputText>
+        <InputText @bind-Value="_newContactForm.Email"
+                   class="form-control" id="email-input" placeholder="example@mail.com..." />
     </div>
     <div class="form-group">
         <label for="subject-input">Subject</label>
-        <InputText @bind-Value="_newContactForm.Subject" class="form-control" id="subject-input" placeholder="Subject..."></InputText>
+        <InputText @bind-Value="_newContactForm.Subject"
+                   class="form-control" id="subject-input" placeholder="Subject..." />
     </div>
     <div class="form-group">
         <label for="message-input">Message</label>
-        <InputTextArea @bind-Value="_newContactForm.Message" class="form-control" id="message-input" placeholder="Enter your message here..."></InputTextArea>
+        <InputTextArea @bind-Value="_newContactForm.Message"
+                       class="form-control" id="message-input"
+                       placeholder="Enter your message here..." />
     </div>
     <button class="btn btn-primary">Send</button>
-    <DataAnnotationsValidator></DataAnnotationsValidator>
-    <ValidationSummary></ValidationSummary>
 </EditForm>
-@_emailTriggeredMessageTemp
+
+@* Temporary Form *@
+<EditForm Model="@_newContactForm" OnValidSubmit="SendEmail">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <InputText @bind-Value="_newContactForm.FullName" />
+    <InputText @bind-Value="_newContactForm.Email" />
+    <InputText @bind-Value="_newContactForm.Subject" />
+    <InputTextArea @bind-Value="_newContactForm.Message" />
+
+    <button>Send</button>
+</EditForm>
+@* END of Temporary Form*@
 
 @code
 {
+    
     private ContactFormModel _newContactForm = new ContactFormModel();
-    private string _emailTriggeredMessageTemp { get; set; }
-    private int _tempNumberProp { get; set; }
 
-    private async Task SendEmail()
+    private void SendEmail()
     {
-        // Send Email.
-        _tempNumberProp++;
-        _emailTriggeredMessageTemp = $"SendEmail() was triggered {_tempNumberProp}";
+        // TODO: Send Email.
     }
 }
