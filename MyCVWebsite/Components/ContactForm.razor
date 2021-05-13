@@ -27,19 +27,6 @@
     <button class="btn btn-primary">Send</button>
 </EditForm>
 
-@* Temporary Form *@
-<EditForm Model="@_newContactForm" OnValidSubmit="SendEmail">
-    <DataAnnotationsValidator />
-    <ValidationSummary />
-    <InputText @bind-Value="_newContactForm.FullName" />
-    <InputText @bind-Value="_newContactForm.Email" />
-    <InputText @bind-Value="_newContactForm.Subject" />
-    <InputTextArea @bind-Value="_newContactForm.Message" />
-
-    <button>Send</button>
-</EditForm>
-@* END of Temporary Form*@
-
 @code
 {
     
