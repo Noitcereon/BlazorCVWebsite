@@ -1,12 +1,12 @@
-﻿const webpack = require('webpack');
-const path = require('path');
+﻿const path = require('path');
 
 const config = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, '../wwwroot/js'),
-        filename: 'index.bundle.js'
+        filename: 'bundle.js'
     },
+    mode: "development", // development or production
     module: {
         rules: [
             {
@@ -18,7 +18,8 @@ const config = {
                 ]
             }
         ]
-    }
+    },
+    devtool: "source-map"
 };
 
 module.exports = config;

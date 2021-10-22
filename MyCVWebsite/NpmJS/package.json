@@ -4,7 +4,8 @@
   "description": "A website that functions as a CV.",
   "main": "index.js",
   "scripts": {
-    "build": "webpack build"
+    "build": "webpack build",
+    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
     "css-loader": "^6.4.0",
     "sass": "^1.43.2",
     "sass-loader": "^12.2.0",
+    "style-loader": "^3.3.1",
     "webpack": "^5.59.1",
     "webpack-cli": "^4.9.1"
   }

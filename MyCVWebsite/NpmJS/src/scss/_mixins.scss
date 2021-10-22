@@ -1,0 +1,32 @@
+// 1em = 16px by default. To translate from px to em (or rem) do: pixels / 16
+
+// Breakpoints (64em is by default 1024px)
+@media (min-width: 64em) {
+  // styles go here
+}
+
+// 640px, 1024px, 1400px
+$breakpoints-up: (
+  "medium": "40em",
+  "large": "64em",
+  "xLarge": "87.5em",
+);
+
+// 639px, 1023px, 1399px
+$breakpoints-down: (
+  "small": "39.9375em",
+  "medium": "63.9375em",
+  "large": "87.4375em",
+);
+
+// map-get basically means "retrive the the $size from the $breakpoints-up array". 
+// So you specify "medium" (or whatever the key is called in the array) to retrieve 40em from the $breakpoints-up array.
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+      @content; // whatever styles defined when calling this mixin.
+  }
+}
+// Usage:
+// @include breakpoint-up(large){
+//     display:none; or any other css.
+//}
