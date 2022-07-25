@@ -1,8 +1,4 @@
 # BlazorCVWebsite
-My CV website. Currently under construction.
+Abandoned project, which was intended to work as my CV.
 
-# Test
-## test 2
-### test 3
-**test 4**
-*test 5*
+I have since made another one: [GitLab repository link](https://gitlab.com/Noitcereon/noitcereon-cv)
